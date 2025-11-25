@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body{
     background: linear-gradient(360deg, #003C43, #003C43 );
+    font-family: 'montserrat', sans-serif;
 }
 
 .card{
@@ -19,6 +21,12 @@ body{
     margin: 20px auto 0;
     padding: 50px 35px;
 
+}
+.card .tips{
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
 .search{
     width: 100%;
@@ -40,6 +48,11 @@ body{
     font-size: 18px;
 }
 
+.search input:active {
+    border: 1px solid #00ffa1 ;
+    outline: olivedrab;
+}
+
 .search button{
     border: 0;
     outline: 0;
@@ -51,9 +64,29 @@ body{
     align-items: center;
 }
 
+.search button:active {
+    animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.9); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
 .search button img{
     width: 16px;
     align-items: center;
+}
+
+.search button img:active {
+    animation: search-icon 0.3s ease-in-out;
+}
+
+@keyframes search-icon {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 

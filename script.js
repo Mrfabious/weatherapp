@@ -48,4 +48,11 @@ searchBtn.addEventListener("click", ()=>{
      checkWeather(searchBox.value);
 })
 
+cityField.addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {  
+         event.preventDefault();
+         searchBtn.click(); 
+      };
+});
+
 
